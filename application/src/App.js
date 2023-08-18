@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import './App.css';
+import Cards from './Cards.js'
 
 function App() {
   let [cards, setCards] = useState([
@@ -30,93 +31,57 @@ function App() {
       image: 'https://www.topgear.com/sites/default/files/cars-car/image/2019/01/dg019_004clan2kt8c8qmtrmpcl3p72agsepl.jpg'
     }
   ]);
-  let [text, setText] = useState();
+  let [valueStamp, setStamp] = useState();
+  let [valueSpeed, setSpeed] = useState();
+  let [valueRelease, setRelease] = useState();
+  let [valueCountry, setCountry] = useState();
+  let [valueWeight, setWeight] = useState();
+  let [valueImage, setImage] = useState();
 
   return (
-
     <div className="car__character">
       <h2 className='car__title'>Form for add car</h2>
-      <input className='car__stamp' type='text' placeholder='stamp' value={text}
+      <input className='car__stamp' type='text' placeholder='stamp' value={valueStamp}
         onChange={(event) => {
-          setText(event.target.value);
+          setStamp(event.target.value);
         }}></input>
-      <input className='car__speed' type='number' placeholder='speed' value={text}
+      <input className='car__speed' type='number' placeholder='speed' value={valueSpeed}
         onChange={(event) => {
-          setText(event.target.value);
+          setSpeed(event.target.value);
         }}></input>
-      <input className='car__release' type='number' placeholder='release' value={text}
+      <input className='car__release' type='number' placeholder='release' value={valueRelease}
         onChange={(event) => {
-          setText(event.target.value);
+          setRelease(event.target.value);
         }}></input>
-      <input className='car__country' type='text' placeholder='country' value={text}
+      <input className='car__country' type='text' placeholder='country' value={valueCountry}
         onChange={(event) => {
-          setText(event.target.value);
+          setCountry(event.target.value);
         }}></input>
-      <input className='car__weight' type='number' placeholder='weight' value={text} 
+      <input className='car__weight' type='number' placeholder='weight' value={valueWeight} 
         onChange={(event) => {
-          setText(event.target.value);
+          setWeight(event.target.value);
         }}></input>
-      <input className='car__image' type='text' placeholder='image' value={text}
+      <input className='car__image' type='text' placeholder='image' value={valueImage}
         onChange={(event) => {
-          setText(event.target.value);
+          setImage(event.target.value);
         }}></input>
       <button className='car__button'
         onClick={() => {
           setCards([
             ...cards,
             {
-              stamp: text,
-              speed: +text,
-              release: +text,
-              country: text,
-              weight: +text,
-              image: text
+              stamp: valueStamp,
+              speed: +valueSpeed,
+              release: +valueRelease,
+              country: valueCountry,
+              weight: +valueWeight,
+              image: valueImage
             }
           ])
         }}>Add car</button>
 
-      <div className='car__card'>
-        {cards.map((item) => (
-          <div className='car__data'>
-            <img src={item.image} className='main__img' alt='Car'></img>
-            <p className='main__stamp'>{item.stamp}</p>
-            <p className='main__speed'>Speed: {item.speed} km/h</p>
-            <p className='main__release'>Release: {item.release}</p>
-            <p className='main__country'>Country: {item.country}</p>
-            <p className='main__weight'>Weight: {item.weight} kg</p>
-          </div>
-        ))}
-      </div>
+      <div className='car__card'><Cards cards={cards}/></div>
     </div>
-    // <div>
-    //   <div className="list">
-        
-    //     {cards.map((item) => (
-    //       <div className='igor' onClick={() => {
-    //         console.log('hello');
-    //       }}>
-    //         {item.name}
-    //       </div>
-    //     ))}
-    //     <input className='input' type='text' placeholder='please enter name' value={text}
-    //       onChange={(event) => {
-    //         setText(event.target.value);
-    //       }}></input>
-    //   </div>
-
-    //   <div
-    //     className='btn'
-    //     onClick={() => {
-    //       setCards([
-    //         ...cards,
-    //         {
-    //           name: text
-    //         },
-    //       ]);
-    //     }}>
-    //       Add
-    //   </div>
-    // </div>
   );
 }
 
