@@ -1,4 +1,81 @@
-.car__character {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.record__container {
+  background: url('img/dairy.jpg');
+  padding: 30px;
+}
+
+.record__title {
+  text-align: center;
+  color: whitesmoke;
+  padding-bottom: 40px;
+}
+
+.record__new {
+  color: whitesmoke;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 16px;
+  padding: 0px 0px 20px 50px;
+}
+
+.record__input {
+  margin: 0px 40px 50px 50px;
+  border-radius: 15px;
+  padding: 6px 40px 6px 8px;
+  border: none;
+  background: #D9D9D9;
+}
+
+.record__button {
+  padding: 6px 18px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  background: #D9D9D9;
+}
+
+.records__subtext {
+  padding: 0px 0px 20px 50px;
+  color: whitesmoke;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+.records__cards {
+  padding: 10px;
+}
+
+.record__data {
+  background: #D9D9D9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .car__character {
   background: blueviolet;
   width: 500px;
   padding: 10px;
@@ -80,8 +157,7 @@
   padding: 8px 5px;
   border: none;
   border-radius: 5px;
-  margin-left: 20px;
-  margin-top: 30px;
+  margin: 30px 0px 50px 20px;
   width: 90%;
   cursor: pointer;
 }
@@ -89,6 +165,14 @@
 .car__card {
   padding: 10px;
   margin: 0 auto;
+}
+
+.car__delete {
+  background: rgb(241, 197, 197);
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 .main__img {
@@ -110,8 +194,7 @@
 
 .main__speed {
   background: rgb(241, 197, 197);
-  padding: 10px;
-  padding-left: 30px;
+  padding: 10px 10px 10px 30px;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(104, 62, 62);
@@ -120,8 +203,7 @@
 
 .main__release {
   background: rgb(241, 197, 197);
-  padding: 10px;
-  padding-left: 30px;
+  padding: 10px 10px 10px 30px;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(104, 62, 62);
@@ -130,8 +212,7 @@
 
 .main__country {
   background: rgb(241, 197, 197);
-  padding: 10px;
-  padding-left: 30px;
+  padding: 10px 10px 10px 30px;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(104, 62, 62);
@@ -140,10 +221,10 @@
 
 .main__weight {
   background: rgb(241, 197, 197);
-  padding: 10px;
-  padding-left: 30px;
+  padding: 10px 10px 10px 30px;
+  margin-bottom: 50px;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(104, 62, 62);
   border-radius: 30px;
-}
+} */
